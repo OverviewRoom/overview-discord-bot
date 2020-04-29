@@ -1,7 +1,9 @@
 import discord
 from discord import utils
+import os
  
 import config
+TOKEN = os.environ.get('BOT_TOKEN')
  
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -48,4 +50,4 @@ class MyClient(discord.Client):
  
 # RUN
 client = MyClient()
-client.run(config.TOKEN)
+client.run(TOKEN)
